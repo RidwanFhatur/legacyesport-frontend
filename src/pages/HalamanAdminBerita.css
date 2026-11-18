@@ -1,0 +1,361 @@
+
+/* ==============================
+   HALAMAN KELOLA BERITA
+============================== */
+
+.admin-news-page {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 28px;
+  box-sizing: border-box;
+  color: #f5f7fa;
+}
+
+.admin-news-page .admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.admin-news-page .admin-topbar h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.admin-news-page .admin-topbar p {
+  margin: 0;
+  color: #aab4c5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admin-news-page button {
+  min-height: 40px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #ffd32e;
+  color: #151515;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-news-page button:hover {
+  filter: brightness(1.08);
+}
+
+.admin-news-page button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* PANEL FORM DAN DAFTAR */
+
+.admin-news-page .admin-panel {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid #273246;
+  border-radius: 14px;
+  background: #111722;
+}
+
+.admin-news-page .admin-panel h2 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* FORM */
+
+.admin-news-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+
+.admin-news-form label {
+  display: block;
+  margin-top: 7px;
+  color: #e7ebf2;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-news-form input,
+.admin-news-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #354158;
+  border-radius: 8px;
+  background: #090e17;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.admin-news-form input {
+  min-height: 44px;
+}
+
+.admin-news-form textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.admin-news-form input:focus,
+.admin-news-form textarea:focus {
+  border-color: #ffd32e;
+  box-shadow: 0 0 0 2px rgb(255 211 46 / 12%);
+}
+
+.admin-news-form input::placeholder,
+.admin-news-form textarea::placeholder {
+  color: #7f8ba0;
+}
+
+.admin-news-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin-news-form-actions button[type="button"] {
+  border-color: #39465d;
+  background: #252f41;
+  color: #ffffff;
+}
+
+/* PESAN */
+
+.news-success,
+.news-error {
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.news-success {
+  border: 1px solid #176d4a;
+  background: #102e24;
+  color: #8af0be;
+}
+
+.news-error {
+  border: 1px solid #85333d;
+  background: #35191e;
+  color: #ffb3bb;
+}
+
+/* HEADER DAFTAR BERITA */
+
+.admin-news-page .admin-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-news-page .admin-panel-header h2 {
+  margin: 0;
+}
+
+.admin-news-page .admin-panel-header button {
+  flex-shrink: 0;
+}
+
+/* KARTU BERITA */
+
+.admin-news-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin-news-item {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #2a3549;
+  border-radius: 12px;
+  background: #171e2b;
+}
+
+.admin-news-item > img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  background: #0b1019;
+}
+
+.admin-news-item-content {
+  min-width: 0;
+  padding: 18px;
+}
+
+.admin-news-item-content h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.admin-news-item-content p {
+  margin: 0 0 14px;
+  color: #c1cad8;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.admin-news-item-content small {
+  display: block;
+  margin-bottom: 16px;
+  color: #8996aa;
+  font-size: 12px;
+}
+
+.admin-news-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 14px;
+  border-top: 1px solid #2a3549;
+}
+
+.admin-news-item-actions .admin-news-delete {
+  background: #d83b49;
+  color: #ffffff;
+}
+
+/* ==============================
+   RESPONSIVE HP
+============================== */
+
+@media (max-width: 600px) {
+  .admin-news-page {
+    padding: 18px 14px;
+  }
+
+  .admin-news-page .admin-topbar {
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .admin-news-page .admin-topbar h1 {
+    font-size: 22px;
+  }
+
+  .admin-news-page .admin-topbar p {
+    font-size: 12px;
+  }
+
+  .admin-news-page .admin-topbar button {
+    flex-shrink: 0;
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+
+  .admin-news-page .admin-panel {
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+
+  .admin-news-page .admin-panel h2 {
+    font-size: 17px;
+  }
+
+  .admin-news-form input,
+  .admin-news-form textarea {
+    font-size: 14px;
+  }
+
+  .admin-news-form-actions button {
+    flex: 1;
+  }
+
+  .admin-news-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .admin-news-item-content {
+    padding: 15px;
+  }
+
+  .admin-news-item-content h3 {
+    font-size: 17px;
+  }
+
+  .admin-news-page .admin-panel-header {
+    align-items: flex-start;
+  }
+
+  .admin-news-page .admin-panel-header h2 {
+    line-height: 1.4;
+  }
+}
+
+/* TABLET DAN DESKTOP */
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .admin-news-page {
+    padding: 22px;
+  }
+
+  .admin-news-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+.news-image-preview {
+    margin-top: 15px;
+}
+
+.news-image-preview p {
+    margin-bottom: 8px;
+    color: #d1d5db;
+}
+
+.news-image-preview img {
+    width: 100%;
+    max-width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.admin-news-photo {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: block;
+}

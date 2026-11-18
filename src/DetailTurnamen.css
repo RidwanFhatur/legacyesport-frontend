@@ -1,0 +1,616 @@
+
+/* ==========================================
+   DETAIL TURNAMEN - LEGACY ESPORTS
+========================================== */
+
+/* ==========================================
+   TOMBOL KEMBALI
+========================================== */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    padding: 10px 17px;
+
+    color: #ffffff;
+    background: #151d2b;
+
+    border: 1px solid #283447;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.back-button:hover {
+    color: #ffd32e;
+    border-color: #ffd32e;
+    transform: translateX(-3px);
+}
+
+/* ==========================================
+   HEADER DETAIL TURNAMEN
+========================================== */
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    padding: 25px;
+    margin-bottom: 22px;
+
+    background: linear-gradient(135deg, #151d2b, #0b111c);
+    border: 1px solid #283447;
+    border-radius: 16px;
+}
+
+.detail-logo {
+    width: 115px;
+    height: 115px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffd32e;
+    background: #202b3d;
+
+    border: 1px solid #34445d;
+    border-radius: 14px;
+
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.detail-logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 13px;
+}
+
+.detail-title-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.detail-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.detail-title-row h1 {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.detail-title-content > p {
+    margin: 12px 0 0;
+
+    color: #a8b3c5;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   TOMBOL DAFTAR
+========================================== */
+
+.detail-register-button {
+    flex-shrink: 0;
+
+    padding: 12px 24px;
+
+    color: #10151f;
+    background: #ffd32e;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.detail-register-button:hover {
+    background: #ffe16b;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   INFORMASI TURNAMEN
+========================================== */
+
+.detail-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 95px;
+    padding: 17px;
+
+    background: #111a28;
+    border: 1px solid #283447;
+    border-radius: 12px;
+}
+
+.info-box span {
+    color: #8996aa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.info-box strong {
+    color: #ffd32e;
+    font-size: 19px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   TAB NAVIGASI DETAIL
+========================================== */
+
+.detail-tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 22px;
+    padding: 7px;
+
+    background: #0d1420;
+    border: 1px solid #283447;
+    border-radius: 12px;
+
+    overflow-x: auto;
+}
+
+.detail-tabs button {
+    flex: 1;
+    min-width: 100px;
+
+    padding: 13px 17px;
+
+    color: #8996aa;
+    background: transparent;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.detail-tabs button:hover {
+    color: #ffffff;
+    background: #1a2637;
+}
+
+.detail-tabs button.active-tab {
+    color: #10151f;
+    background: #ffd32e;
+}
+
+/* ==========================================
+   KONTEN DETAIL
+========================================== */
+
+.detail-section {
+    padding: 25px;
+
+    background: #111a28;
+    border: 1px solid #283447;
+    border-radius: 14px;
+}
+
+.detail-section > h2 {
+    margin: 0 0 22px;
+    padding-bottom: 15px;
+
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0.7px;
+
+    border-bottom: 1px solid #283447;
+}
+
+.detail-section > h3 {
+    margin: 27px 0 16px;
+
+    color: #ffd32e;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.detail-section > p {
+    color: #a8b3c5;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   INFORMASI DESKRIPSI
+========================================== */
+
+.rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.rules-list > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #283447;
+}
+
+.rules-list > div:last-child {
+    border-bottom: none;
+}
+
+.rules-list span {
+    color: #8996aa;
+    font-size: 13px;
+}
+
+.rules-list strong {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* ==========================================
+   BRAKET TURNAMEN
+========================================== */
+
+.bracket-preview {
+    display: flex;
+    gap: 20px;
+
+    padding: 5px 2px 18px;
+
+    overflow-x: auto;
+    align-items: flex-start;
+}
+
+.bracket-round {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    min-width: 235px;
+    max-width: 280px;
+}
+
+.bracket-round > h3 {
+    margin: 0;
+    padding: 13px;
+
+    color: #ffd32e;
+    background: #1a2637;
+
+    border: 1px solid #34445d;
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.bracket-match {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    padding: 9px;
+
+    background: #0b111c;
+    border: 1px solid #283447;
+    border-radius: 10px;
+}
+
+.bracket-team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    min-height: 39px;
+    padding: 9px 11px;
+
+    color: #dce3ed;
+    background: #151e2c;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.bracket-team span {
+    overflow-wrap: anywhere;
+}
+
+.bracket-team strong {
+    color: #00e5ae;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.bracket-team.bracket-winner {
+    color: #ffd32e;
+    background: rgba(255, 211, 46, 0.09);
+}
+
+/* ==========================================
+   BRAKET KOSONG
+========================================== */
+
+.bracket-empty {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #0b111c;
+    border: 1px dashed #34445d;
+    border-radius: 12px;
+}
+
+.bracket-empty h3 {
+    margin: 0 0 10px;
+
+    color: #ffd32e;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.bracket-empty p {
+    margin: 0;
+
+    color: #8996aa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   JADWAL TURNAMEN
+========================================== */
+
+.detail-schedule {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    margin-top: 24px;
+}
+
+.detail-schedule > div {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    min-width: 0;
+    padding: 23px;
+
+    overflow: hidden;
+
+    background: linear-gradient(145deg, #151d2b, #0b111c);
+
+    border: 1px solid #283447;
+    border-radius: 14px;
+
+    transition: 0.2s ease;
+}
+
+.detail-schedule > div::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #ffd32e;
+}
+
+.detail-schedule > div:hover {
+    border-color: #ffd32e;
+    transform: translateY(-3px);
+}
+
+.detail-schedule > div > strong {
+    color: #ffd32e;
+
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.detail-schedule > div > span {
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.detail-schedule > div > b {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+
+    padding: 9px 15px;
+
+    color: #00e5ae;
+    background: rgba(0, 229, 174, 0.09);
+
+    border: 1px solid rgba(0, 229, 174, 0.22);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 900px) {
+    .detail-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .detail-title-row h1 {
+        font-size: 23px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE HP
+========================================== */
+
+@media (max-width: 600px) {
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 18px;
+        gap: 16px;
+    }
+
+    .detail-logo {
+        width: 85px;
+        height: 85px;
+        font-size: 27px;
+    }
+
+    .detail-title-content {
+        width: 100%;
+    }
+
+    .detail-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .detail-title-row h1 {
+        font-size: 21px;
+    }
+
+    .detail-register-button {
+        width: 100%;
+    }
+
+    .detail-title-content > p {
+        font-size: 13px;
+    }
+
+    .detail-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .info-box {
+        min-height: 82px;
+        padding: 13px;
+    }
+
+    .info-box strong {
+        font-size: 16px;
+    }
+
+    .detail-tabs {
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .detail-tabs button {
+        flex: 0 0 auto;
+        min-width: 85px;
+        padding: 12px 13px;
+        font-size: 11px;
+    }
+
+    .detail-section {
+        padding: 17px;
+    }
+
+    .detail-section > h2 {
+        font-size: 16px;
+    }
+
+    .detail-section > p {
+        font-size: 13px;
+    }
+
+    .rules-list > div {
+        align-items: flex-start;
+    }
+
+    .rules-list span,
+    .rules-list strong {
+        font-size: 12px;
+    }
+
+    .bracket-round {
+        min-width: 215px;
+    }
+
+    .detail-schedule {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 18px;
+    }
+
+    .detail-schedule > div {
+        padding: 19px;
+    }
+
+    .detail-schedule > div > span {
+        font-size: 19px;
+    }
+}

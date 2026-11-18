@@ -1,0 +1,133 @@
+
+/* =====================================
+   ADMIN ROOM - LEGACY ESPORTS
+===================================== */
+
+.admin-content {
+  min-width: 0;
+}
+
+.admin-content .admin-topbar {
+  margin-bottom: 25px;
+}
+
+.admin-content .admin-topbar h1 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.admin-content .admin-topbar p {
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* PANEL ROOM */
+
+.admin-content .admin-panel {
+  background: #101827;
+  border: 1px solid #263247;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+
+.admin-content .admin-panel > h2 {
+  color: #ffd32e;
+  font-size: 19px;
+  margin: 0 0 22px;
+}
+
+/* KARTU TURNAMEN */
+
+.admin-content .admin-tournament-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.admin-content .admin-tournament-card {
+  background: #151f30;
+  border: 1px solid #29374c;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.2s ease;
+}
+
+.admin-content .admin-tournament-card:hover {
+  border-color: #ffd32e;
+  transform: translateY(-3px);
+}
+
+.admin-content .admin-tournament-card h2 {
+  color: #ffffff;
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+
+.admin-content .admin-tournament-card p {
+  color: #aab4c3;
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 42px;
+}
+
+/* TOMBOL ROOM */
+
+.admin-content .admin-tournament-card button,
+.admin-content .admin-panel > button {
+  background: #ffd32e;
+  color: #111827;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 16px;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-content .admin-tournament-card button:hover,
+.admin-content .admin-panel > button:hover {
+  background: #ffe477;
+}
+
+/* PESAN ERROR */
+
+.admin-content .room-error {
+  color: #ff7777;
+  background: #351b24;
+  border: 1px solid #713342;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .admin-content .admin-topbar h1 {
+    font-size: 21px;
+  }
+
+  .admin-content .admin-panel {
+    padding: 16px;
+  }
+
+  .admin-content .admin-tournament-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .admin-content .admin-tournament-card {
+    padding: 16px;
+  }
+
+  .admin-content .admin-panel > button {
+    max-width: 100%;
+    font-size: 11px;
+  }
+}
