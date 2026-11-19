@@ -1,7 +1,8 @@
 import "./HalamanAdminBerita.css";
 import { useEffect, useState } from "react";
 
-const API_URL = "http://127.0.0.1:8000/api/news";
+const API_URL = import.meta.env.VITE_API_BASE_URL + "/news"||"http://127.0.0.1:8000/api/news";
+const SERVER_URL = import.meta.env.VITE_SERVER_BASE_URL;
 
 function HalamanAdminBerita({
   akun,
@@ -388,7 +389,7 @@ const simpanBerita = async (event) => {
                 <div className="news-image-preview">
                     <p>Foto saat ini:</p>
                     <img
-                        src={`http://127.0.0.1:8000/storage/${gambarLama}`}
+                        src={`${SERVER_URL}/storage/${gambarLama}`}
                         alt="Foto berita sebelumnya"
                     />
                 </div>
@@ -441,7 +442,7 @@ const simpanBerita = async (event) => {
                           src={
                               item.image.startsWith("http")
                                   ? item.image
-                                  : `http://127.0.0.1:8000/storage/${item.image}`
+                                  : `${SERVER_URL}/storage/${item.image}`
                           }
                           alt={item.title}
                           className="admin-news-photo"

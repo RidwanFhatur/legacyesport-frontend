@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { apiRequest } from "../services/api";
 
+const SERVER_URL =
+  (import.meta.env.VITE_SERVER_BASE_URL ||
+    "https://legacyesport.smkn1sumedang.sch.id").replace(/\/+$/, "");
+
 function HalamanAdminPeserta({
   akun,
   bukaHalaman,
@@ -79,11 +83,39 @@ function HalamanAdminPeserta({
   }
 };
 
+
 const urlBukti = (path) => {
   if (!path) return "";
 
-  return `http://127.0.0.1:8000/storage/${path}`;
+  const gambar = String(path).trim();
+
+  // Jika URL sudah lengkap
+  if (gambar.startsWith("http://") || gambar.startsWith("https://")) {
+    try {
+      const url = new URL(gambar);
+
+      // Ubah alamat localhost menjadi domain hosting
+      if (
+        url.hostname === "localhost" ||
+        url.hostname === "127.0.0.1"
+      ) {
+        return `${SERVER_URL}${url.pathname}${url.search}${url.hash}`;
+      }
+
+      return gambar;
+    } catch {
+      return gambar;
+    }
+  }
+
+  // Hilangkan awalan storage/ jika sudah ada
+  const pathBersih = gambar
+    .replace(/^\/+/, "")
+    .replace(/^storage\//, "");
+
+  return `${SERVER_URL}/storage/${pathBersih}`;
 };
+
 
   return (
     <main className="admin-page admin-peserta-page">

@@ -13,7 +13,7 @@ function DetailTurnamen({ bukaHalaman, turnamenId, akun }) {
   const [jadwalBraket, setJadwalBraket] = useState([]);
   const [loadingJadwal, setLoadingJadwal] = useState(false);
   const [errorJadwal, setErrorJadwal] = useState("");
-
+  const API_URL = import.meta.env.VITE_API_BASE_URL ||"http://127.0.0.1:8000/api/";
  
 useEffect(() => {
   const ambilDetailTurnamen = async () => {
@@ -33,7 +33,7 @@ useEffect(() => {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/tournaments",
+        `${API_URL}/tournaments`,
         {
           headers: {
             Accept: "application/json",
@@ -113,7 +113,7 @@ useEffect(() => {
       setErrorJadwal("");
 
       const response = await fetch(
-        `http://127.0.0.1:8000/api/jadwal-turnamen/${idTurnamen}`,
+        `${API_URL}/jadwal-turnamen/${idTurnamen}`,
         {
           headers: {
             Accept: "application/json",

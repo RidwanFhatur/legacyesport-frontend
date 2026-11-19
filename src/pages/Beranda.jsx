@@ -1,8 +1,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const API_URL = "http://127.0.0.1:8000/api";
-const SERVER_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_BASE_URL|| "http://127.0.0.1:8000/api";
+const SERVER_URL = import.meta.env.VITE_SERVER_BASE_URL;
+
+console.log("DEBUG API_URL:", API_URL);
+console.log("DEBUG SERVER_URL:", SERVER_URL);
 
 function Beranda({ bukaHalaman }) {
   const [berita, setBerita] = useState([]);
